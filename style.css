@@ -98,4 +98,7 @@ a{
     #share {
         font-size: 16px;
     }
+    .container{
+        margin: auto;
+    }
 }
