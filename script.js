@@ -62,7 +62,9 @@ let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant 
                 case 6:
                   messageElement.textContent = Vers[6];
                 case 7:
-                  messageElement.textContent = Vers[7]
+                  messageElement.textContent = Vers[7];
+                default:
+                    messageElement.textContent = Vers[7];
               }
 
             visitCount++;
