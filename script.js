@@ -64,6 +64,7 @@ let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant 
                   break;
                 default:
                     messageElement.textContent = Vers[6];
+                    console.log("ff")
 
               }
 
