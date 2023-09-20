@@ -14,7 +14,7 @@ let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant 
         }
 
        
-        function setCookie(name, value, days) {
+        function setCookie(name, value) {
             // const expires = new Date();
             // expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
             // document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
@@ -66,7 +66,7 @@ let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant 
               }
 
             visitCount++;
-            // setCookie('visitCount', visitCount, 30); 
+            setCookie('visitCount', visitCount); 
         }
 
         
