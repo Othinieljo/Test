@@ -5,7 +5,7 @@ document.getElementById("share-button").addEventListener("click", () => {
     window.location.href = whatsappURL;
 });
 
-let Vers = ["Ce qui était déjà là.","Car le salaire du péché, c'est la mort; mais le don gratuit de Dieu, c'est la vie éternelle en Jésus-Christ notre Seigneur.","Il est venu chercher et amener au salut ce qui était perdu.","Viens à Jésus, toi qui est accablé sous le poids d'un lourd fardeau, et il te donnera du repos.","C'est en Jésus seul que se trouve le salut. Dans le monde entier, Dieu n'a jamais donné le nom d'aucun autre homme par lequel nous devions être sauvés.","Si de ta bouche, tu déclares que Jésus est Seigneur et si dans ton coeur, tu crois que Dieu l'a ressuscité des morts, tu seras sauvé."] ; 
+let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant en lui tu ne périsse point mais que tu aies la vie éternelle. Veux tu l'accepter et marcher avec lui ?","Ce qui était déjà là.","Car le salaire du péché, c'est la mort; mais le don gratuit de Dieu, c'est la vie éternelle en Jésus-Christ notre Seigneur.","Il est venu chercher et amener au salut ce qui était perdu.","Viens à Jésus, toi qui est accablé sous le poids d'un lourd fardeau, et il te donnera du repos.","C'est en Jésus seul que se trouve le salut. Dans le monde entier, Dieu n'a jamais donné le nom d'aucun autre homme par lequel nous devions être sauvés.","Si de ta bouche, tu déclares que Jésus est Seigneur et si dans ton coeur, tu crois que Dieu l'a ressuscité des morts, tu seras sauvé."] ; 
 
         function getCookie(name) {
             const value = `; ${document.cookie}`;
@@ -15,9 +15,10 @@ let Vers = ["Ce qui était déjà là.","Car le salaire du péché, c'est la mor
 
        
         function setCookie(name, value, days) {
-            const expires = new Date();
-            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+            // const expires = new Date();
+            // expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            // document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+            document.cookie = `${name}=${value}`;
         }
 
         
@@ -25,23 +26,47 @@ let Vers = ["Ce qui était déjà là.","Car le salaire du péché, c'est la mor
             let visitCount = parseInt(getCookie('visitCount')) || 0;
             const messageElement = document.getElementById('message');
 
-            if (visitCount === 0) {
-                // messageElement.textContent = 'Bienvenue pour votre première visite !';
+            // if (visitCount === 0) {
+            //     // messageElement.textContent = 'Bienvenue pour votre première visite !';
                 
-                messageElement.textContent = Vers[0]
-            } else if (visitCount === 1) {
-                // messageElement.textContent = 'Revenez bientôt !';
-                messageElement.textContent = Vers[1]
-            } else if (visitCount === 2) {
-                // messageElement.textContent = 'Vous êtes de retour !';
-                messageElement.textContent = Vers[2]
-            } else {
-                // messageElement.textContent = 'Bonjour encore une fois !';
-                messageElement.textContent = Vers[3]
-            }
+            //     messageElement.textContent = Vers[0]
+            // } else if (visitCount === 1) {
+            //     // messageElement.textContent = 'Revenez bientôt !';
+            //     messageElement.textContent = Vers[1]
+            // } else if (visitCount === 2) {
+            //     // messageElement.textContent = 'Vous êtes de retour !';
+            //     messageElement.textContent = Vers[2]
+            // } else {
+            //     // messageElement.textContent = 'Bonjour encore une fois !';
+            //     messageElement.textContent = Vers[3]
+            // }
+            switch (visitCount) {
+                case 0:
+                  messageElement.textContent = Vers[0];
+                  break;
+                case 1:
+                  messageElement.textContent = Vers[1];
+                  break;
+                case 2:
+                   messageElement.textContent = Vers[2];
+                  break;
+                case 3:
+                  messageElement.textContent = Vers[3];
+                  break;
+                case 4:
+                  messageElement.textContent = Vers[4];
+                  break;
+                case 5:
+                  messageElement.textContent = Vers[5];
+                  break;
+                case 6:
+                  messageElement.textContent = Vers[6];
+                case 7:
+                  messageElement.textContent = Vers[7]
+              }
 
             visitCount++;
-            setCookie('visitCount', visitCount, 30); 
+            // setCookie('visitCount', visitCount, 30); 
         }
 
         
