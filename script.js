@@ -26,47 +26,52 @@ let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant 
             let visitCount = parseInt(getCookie('visitCount')) || 0;
             const messageElement = document.getElementById('message');
 
-            // if (visitCount === 0) {
-            //     // messageElement.textContent = 'Bienvenue pour votre première visite !';
-                
-            //     messageElement.textContent = Vers[0]
-            // } else if (visitCount === 1) {
-            //     // messageElement.textContent = 'Revenez bientôt !';
-            //     messageElement.textContent = Vers[1]
-            // } else if (visitCount === 2) {
-            //     // messageElement.textContent = 'Vous êtes de retour !';
-            //     messageElement.textContent = Vers[2]
-            // } else {
-            //     // messageElement.textContent = 'Bonjour encore une fois !';
-            //     messageElement.textContent = Vers[3]
-            // }
-            switch (visitCount) {
-                case 0:
-                  messageElement.textContent = Vers[0];
-                  break;
-                case 1:
-                  messageElement.textContent = Vers[1];
-                  break;
-                case 2:
-                   messageElement.textContent = Vers[2];
-                  break;
-                case 3:
-                  messageElement.textContent = Vers[3];
-                  break;
-                case 4:
-                  messageElement.textContent = Vers[4];
-                  break;
-                case 5:
-                  messageElement.textContent = Vers[5];
-                  break;
-                case 6:
-                  messageElement.textContent = Vers[6];
-                  break;
-                default:
-                    messageElement.textContent = Vers[6];
-                    console.log("ff")
+            if (visitCount === 0) {
+                messageElement.textContent = Vers[0]
+            } else if (visitCount === 1) {
+                messageElement.textContent = Vers[1] ;
+            } else if (visitCount === 2) {
+                messageElement.textContent = Vers[2];
+            } else if (visitCount === 3) {
+                messageElement.textContent = Vers[3];
+            }
+            else if (visitCount === 4) {
+                messageElement.textContent = Vers[4];
+            }else if (visitCount === 5) {
+                messageElement.textContent = Vers[5];
+            }
+            else if (visitCount === 6) {
+               messageElement.textContent = Vers[6];
+            }else{
+                messageElement.textContent = Vers[6];
+            }
+            // switch (visitCount) {
+            //     case 0:
+            //       messageElement.textContent = Vers[0];
+            //       break;
+            //     case 1:
+            //       messageElement.textContent = Vers[1];
+            //       break;
+            //     case 2:
+            //        messageElement.textContent = Vers[2];
+            //       break;
+            //     case 3:
+            //       messageElement.textContent = Vers[3];
+            //       break;
+            //     case 4:
+            //       messageElement.textContent = Vers[4];
+            //       break;
+            //     case 5:
+            //       messageElement.textContent = Vers[5];
+            //       break;
+            //     case 6:
+            //       messageElement.textContent = Vers[6];
+            //       break;
+            //     default:
+            //         messageElement.textContent = Vers[6];
+            //         console.log("ff")
 
-              }
+            //   }
 
             visitCount++;
             setCookie('visitCount', visitCount); 
