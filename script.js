@@ -5,7 +5,7 @@ document.getElementById("share-button").addEventListener("click", () => {
     window.location.href = whatsappURL;
 });
 
-let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant en lui tu ne périsse point mais que tu aies la vie éternelle. Veux tu l'accepter et marcher avec lui ?","Ce qui était déjà là.","Car le salaire du péché, c'est la mort; mais le don gratuit de Dieu, c'est la vie éternelle en Jésus-Christ notre Seigneur.","Il est venu chercher et amener au salut ce qui était perdu.","Viens à Jésus, toi qui est accablé sous le poids d'un lourd fardeau, et il te donnera du repos.","C'est en Jésus seul que se trouve le salut. Dans le monde entier, Dieu n'a jamais donné le nom d'aucun autre homme par lequel nous devions être sauvés.","Si de ta bouche, tu déclares que Jésus est Seigneur et si dans ton coeur, tu crois que Dieu l'a ressuscité des morts, tu seras sauvé."] ; 
+let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant en lui tu ne périsse point mais que tu aies la vie éternelle. Veux tu l'accepter et marcher avec lui ?","Car le salaire du péché, c'est la mort; mais le don gratuit de Dieu, c'est la vie éternelle en Jésus-Christ notre Seigneur.","Il est venu chercher et amener au salut ce qui était perdu.","Viens à Jésus, toi qui est accablé sous le poids d'un lourd fardeau, et il te donnera du repos.","C'est en Jésus seul que se trouve le salut. Dans le monde entier, Dieu n'a jamais donné le nom d'aucun autre homme par lequel nous devions être sauvés.","Si de ta bouche, tu déclares que Jésus est Seigneur et si dans ton coeur, tu crois que Dieu l'a ressuscité des morts, tu seras sauvé."] ; 
 
         function getCookie(name) {
             const value = `; ${document.cookie}`;
@@ -40,10 +40,8 @@ let Vers = ["DIEU t'aime tant qu'il a donné son Fils unique afin qu'en croyant 
             }else if (visitCount === 5) {
                 messageElement.textContent = Vers[5];
             }
-            else if (visitCount === 6) {
-               messageElement.textContent = Vers[6];
-            }else{
-                messageElement.textContent = Vers[6];
+            else{
+                messageElement.textContent = Vers[5];
             }
             // switch (visitCount) {
             //     case 0:
